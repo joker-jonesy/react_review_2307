@@ -76,6 +76,41 @@ section{
   padding-top: 60px;
 }
 
+.post{
+  background-color: #cbff89;
+  border-radius: 10px;
+  max-width: 500px;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.pop img{
+  height: 100px;
+}
+
+.post img{
+  height: 100px;
+}
+
+.pop{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  color: white;
+  flex-direction: column;
+}
+
 @media screen and (min-width: 600px) {
   .link-container{
     display: flex;

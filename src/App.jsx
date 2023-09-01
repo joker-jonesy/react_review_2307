@@ -1,28 +1,39 @@
-import { useState } from 'react'
+import {useState} from 'react'
 import Nav from "./components/Nav.jsx";
 import ContentContainer from "./components/ContentContainer.jsx";
-import Counter from "./components/Counter.jsx";
+import Post from "./components/Post.jsx";
+
 function App() {
 
-  return (
-    <>
+    const [posts, setPost]= useState(
+        [
+            {
+                id:1,
+                user:"joker-jonesy",
+                text:"This is my very first post",
+                image:null
+            },
+            {
+                id:2,
+                user:"spashy",
+                text:"this is my image",
+                image:"https://i.natgeofe.com/n/4f5aaece-3300-41a4-b2a8-ed2708a0a27c/domestic-dog_thumb_square.jpg"
+            }
+        ]
+    )
 
-    <Nav/>
+    return (
+        <>
 
-      <ContentContainer>
-        <div>
-          <Counter/>
-          <Counter/>
-        </div>
+            <Nav/>
 
-      </ContentContainer>
-      <ContentContainer>
-        <h1>Sell some crap</h1>
-      </ContentContainer>
-
-
-    </>
-  )
+            <ContentContainer>
+                {posts.map(i=>
+                    <Post key={i.id} user={i.user} text={i.text} image={i.image}/>
+                )}
+            </ContentContainer>
+        </>
+    )
 }
 
 export default App

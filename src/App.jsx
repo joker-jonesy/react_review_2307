@@ -2,6 +2,7 @@ import {useState} from 'react'
 import Nav from "./components/Nav.jsx";
 import ContentContainer from "./components/ContentContainer.jsx";
 import Post from "./components/Post.jsx";
+import Divider from "./components/Divider.jsx";
 
 function App() {
 
@@ -32,6 +33,15 @@ function App() {
                     <Post key={i.id} user={i.user} text={i.text} image={i.image}/>
                 )}
             </ContentContainer>
+            <Divider>
+                <h1>This is my mission statement</h1>
+            </Divider>
+            <ContentContainer>
+                {posts.map(i=>
+                    <Post key={i.id} user={i.user} text={i.text} image={i.image}/>
+                )}
+            </ContentContainer>
+            <footer></footer>
         </>
     )
 }
